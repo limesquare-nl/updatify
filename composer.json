@@ -1,0 +1,42 @@
+{
+    "name": "limesquare-nl/updatify",
+    "description": "Sends e-mail notifications on Craft en plugin updates",
+    "type": "craft-plugin",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "updatify"
+    ],
+    "support": {
+        "docs": "https://github.com/limesquare-nl/updatify/blob/master/README.md",
+        "issues": "https://github.com/limesquare-nl/updatify/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jurgen Krol",
+            "homepage": "https://limesquare.nl"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "limesquare\\updatify\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Updatify",
+        "handle": "updatify",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/limesquare-nl/updatify/master/CHANGELOG.md",
+        "components": {
+            "updatifyService": "limesquare\\updatify\\services\\UpdatifyService"
+        },
+        "class": "limesquare\\updatify\\Updatify"
+    }
+}

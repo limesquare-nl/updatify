@@ -1,0 +1,47 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Updatify plugin for Craft CMS 3.x
+ *
+ * Updatify Settings.twig
+ *
+ * @author    Jurgen Krol
+ * @copyright Copyright (c) 2018 Jurgen Krol
+ * @link      https://limesquare.nl
+ * @package   Updatify
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("limesquare\\updatify\\assetbundles\\updatify\\UpdatifyAsset") %}
+
+{{ forms.textField({
+    label: 'E-mail',
+    instructions: 'Enter notification e-mail here.' | t,
+    id: 'uEmail',
+    name: 'uEmail',
+    value: settings.uEmail,
+    errors: settings.getErrors('uEmail')
+    })
+}}
+{{ forms.textField({
+    label: 'First name',
+    instructions: 'Enter first name here.' | t,
+    id: 'uFirstname',
+    name: 'uFirstname',
+    value: settings.uFirstname,
+    errors: settings.getErrors('uFirstname')
+    })
+}}
+
+{{ forms.textField({
+    label: 'Last name',
+    instructions: 'Enter last name here.' | t,
+    id: 'uLastname',
+    name: 'uLastname',
+    value: settings.uLastname,
+    errors: settings.getErrors('uLastname')
+    })
+}}
